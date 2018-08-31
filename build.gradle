@@ -5,7 +5,10 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
-
+tasks.withType(AbstractCompile)*.options*.encoding = tasks.withType(GroovyCompile)*.groovyOptions*.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 apply plugin: 'application'
 mainClassName = 'init/Server'
@@ -20,4 +23,11 @@ dependencies {
 	compile group: 'org.json', name: 'json', version: '20090211'
 
 
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "init/Server"
+    }
+     from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 }
