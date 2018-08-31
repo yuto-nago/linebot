@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar ./build/libs/linebot-sample.jar -Dserver.port=$PORT
+web: java $JAVA_OPTS -jar ./build/libs/work.jar -Dserver.port=$PORT
