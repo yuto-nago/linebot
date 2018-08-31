@@ -33,7 +33,7 @@ public class HttpSendJSON {
 
             System.out.println(env);
 
-            con.setRequestProperty("Authorization", "Bearer" + env);
+            con.setRequestProperty("Authorization", "Bearer " + env);
 
 
             // POSTデータの長さを設定
