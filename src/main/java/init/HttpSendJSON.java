@@ -31,6 +31,8 @@ public class HttpSendJSON {
 
             String env = System.getenv("linebot1");
 
+            System.out.println(env);
+
             con.setRequestProperty("Authorization", env);
 
             // POSTデータの長さを設定
