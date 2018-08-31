@@ -29,7 +29,7 @@ public class HttpSendJSON {
             // データがJSONであること、エンコードを指定する
             con.setRequestProperty("Content-Type", "application/JSON; charset=utf-8");
 
-            String env = System.getenv("line bot1");
+            String env = System.getenv("linebot1");
 
             con.setRequestProperty("Authorization", env);
 
